@@ -1,0 +1,47 @@
+application: ryan-brubaker-hrd
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /css
+  static_dir: css
+  
+- url: /js
+  static_dir: js
+  
+- url: /images
+  static_dir: images
+  
+- url: /docs
+  static_dir: docs
+  
+- url: /bootstrap
+  static_dir: bootstrap
+
+- url: /
+  script: src.controllers.home.app
+
+- url: /fun/morse-code/?
+  script: src.controllers.fun.morse_code.morse_code.app
+  
+- url: /fun/turing-machine/?
+  script: src.controllers.fun.turing_machine.turing_machine.app
+  
+- url: /fun/collision-detection/balls-in-box/?
+  script: src.controllers.fun.collision_detection.balls_in_box.app
+  
+- url: /fun/collision-detection/balls-in-rotated-box/?
+  script: src.controllers.fun.collision_detection.balls_in_rotated_box.app
+
+- url: /fun/collision-detection/pong/?
+  script: src.controllers.fun.collision_detection.pong.app
+
+libraries:
+- name: webapp2
+  version: latest
+  
+- name: jinja2
+  version: latest

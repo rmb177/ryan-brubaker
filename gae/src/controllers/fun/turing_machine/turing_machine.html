@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Turing machine</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Ryan Brubaker">
+
+      <!-- styles -->
+      <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+         <![endif]-->
+
+      <style type="text/css"> 
+            .table
+            {
+               width: 95%;
+            }
+            .table th, .table td
+            {
+               border: 1px solid;    
+            }
+            .table th:first-child, .table tbody tr td:first-child
+            {
+               border: 0;
+               padding-top: 25%;
+               padding-right: 25%;
+            }
+            .table tbody tr:hover td,.table tbody tr:hover th
+            {
+               background-color:#ffffff;
+            }
+            
+            .table tbody tr td
+            {
+               margin: 0;
+               padding: 0;
+            }
+            
+            td input
+            {
+               margin: 0;
+            }
+      </style>
+   </head>
+   
+   <body>
+      <div class="container">
+         <h1>Turing Machine Simulation</h1>
+
+         <br />
+         <br />
+         <div class="row">
+            <div id="turingDiv" class="span6">
+               <canvas id="paperTapeCanvas" width="900" height="50"
+                style="border: 2px solid"></canvas>
+            </div>
+         </div>
+         
+         <br />
+         
+         <div class="row">
+            <a class="btn" id="start-machine">Start</a>
+            <a class="btn" id="clear-machine">Clear</a>
+            <a class="btn offset1" id="alternating-machine">0101010...</a>
+            <a class="btn" id="one-fourth-machine">1/4</a>
+            <a class="btn" id="sequences-of-ones">001011011101111011111...</a>
+         </div>
+   
+         <br />
+         <br />
+         <br />
+         
+         <p>
+            You can specify multiple symbols for a given state by adding a new entry under the first state entry and leaving the &quot;State Name&quot; column blank. 
+            <br/>
+            The first state in the table will be considered the initial state.
+            <br />
+            Valid symbols are any single character, &quot;any&quot; for any non-blank character or &quot;none&quot; for a blank square.
+            <br />
+            <span style="margin-left: 10em;">The &quot;any&quot; symbol is considered a fallback symbol if the state has any other symbols associated with it.</span>
+            <br />
+            <br />
+            Valid operations are a comma-separated list of the following items (e.g. &quot;R, R, P1&quot;):
+            <br />
+               <span style="margin-left: 10em;">L: Shift head left, R: Shift head right, Px: Print x, where x can be any character, E: Erase character</span>
+            <br />
+            
+         
+         <table style="display:none;">
+            <tbody>
+               <tr id="stateRowTemplate">
+                  <td class="pull-right"><i class="icon-plus-sign"></i></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+               </tr>
+            </tbody>
+         </table>
+            
+         <div class="row">
+            <table id="stateMachineTable" class="table table-condensed" style="border: 0;">
+               <tbody>
+                  <tr>
+                     <th class="pull-right"><i class="icon-plus-sign"></i></th>
+                     <th>State Name</th>
+                     <th>Symbol</th>
+                     <th>Operations</th>
+                     <th>Result State</th>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <script type="text/javascript">
+         window.Turing = {}
+      </script>
+      
+      <script src="/js/jquery-1.7.2.min.js"></script>
+      <script src="/bootstrap/js/bootstrap.min.js"></script>
+      <script src="/js/turing_machine/machines.js"></script>
+      <script src="/js/turing_machine/state.js"></script>
+      <script src="/js/turing_machine/stateMachine.js"></script>
+      <script src="/js/turing_machine/tape.js"></script>
+      <script src="/js/turing_machine/turing.js"></script>
+   </body>
+
+</html>
