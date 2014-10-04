@@ -1,5 +1,7 @@
-
+BALL_RADIUS = 10
+lastTime = 0
 rotationAngle = 35
+util = new Collision.Util
 
 # Original coordinates of our square relative to the
 # origin in the x/y plane. Used for rotation around
@@ -36,30 +38,11 @@ planes =
 # are based on the canvas coordinate space
 balls =
 [
-   { velocityX:  2, velocityY:  1, posX: 250, posY: 250 },
-   { velocityX: -2, velocityY:  4, posX: 250, posY: 250 },
-   { velocityX:  1, velocityY: -2, posX: 250, posY: 250 },
-   { velocityX:  1, velocityY: -3, posX: 250, posY: 250 }
+   { velocityX:  200, velocityY:  100, posX: 250, posY: 250 },
+   { velocityX: -200, velocityY:  400, posX: 250, posY: 250 },
+   { velocityX:  100, velocityY: -200, posX: 250, posY: 250 },
+   { velocityX:  100, velocityY: -300, posX: 250, posY: 250 }
 ]
-
-# Frame refresh timer
-frameTimer = null
-
-
-clearCanvas = ->
-   context = document.getElementById("bounds").getContext('2d')
-   context.clearRect(0, 0, context.canvas.width, context.canvas.height)
-
-
-drawBall = (ball) ->
-   context = document.getElementById("bounds").getContext('2d')
-   context.beginPath()
-   context.moveTo(ball.posX, ball.posY)
-   context.arc(ball.posX, ball.posY, 10, 0, Math.PI*2, false)
-   context.closePath()
-   context.fill()
-   context.stroke()
-   
    
 drawBoundaries = ->
    context = document.getElementById("bounds").getContext('2d')
@@ -79,13 +62,17 @@ drawBoundaries = ->
 normalizePoint = (point) ->
    return (point - 250) / 150
 
-nextFrame = ->
-   clearCanvas()
-   drawBoundaries()
+update = (delta) ->
    for ball in balls
-      ball.posX = ball.posX + ball.velocityX
-      ball.posY = ball.posY + ball.velocityY
-      drawBall ball
+      ball.posX = ball.posX + ball.velocityX * delta
+      ball.posY = ball.posY + ball.velocityY * delta
+
+render = ->
+   util.clearCanvas()
+   drawBoundaries()
+   
+   for ball in balls
+      util.drawBall(ball, BALL_RADIUS)
       
       ## Determine if the ball has collided with a wall.
       for plane in planes
@@ -100,9 +87,7 @@ nextFrame = ->
          if distance < 0 and normalVelocity < 0
             ball.velocityX = currentXVelocity - (2 * plane.x * ( (currentXVelocity * plane.x) + (currentYVelocity * plane.y) ))
             ball.velocityY = currentYVelocity - (2 * plane.y * ( (currentXVelocity * plane.x) + (currentYVelocity * plane.y) ))
-
-   frameTimer = setTimeout(nextFrame, 10)
-
+            
 
 recalculateNormal = (plane, corner1, corner2) ->
    plane.x = normalizePoint((corner1.x + corner2.x) / 2)
@@ -125,12 +110,22 @@ rotateSquare = (degrees) ->
    recalculateNormal(planes[1], currentBoundaryPoints[1], currentBoundaryPoints[2])
    recalculateNormal(planes[2], currentBoundaryPoints[2], currentBoundaryPoints[3])
    recalculateNormal(planes[3], currentBoundaryPoints[3], currentBoundaryPoints[0])
+
+mainLoop = =>
+   now = Date.now()
+   delta = (now - lastTime) / 1000
    
+   update(delta)
+   render()
+   lastTime = now
+   window.requestAnimationFrame(mainLoop)
+
 init = ->
    rotateSquare(rotationAngle)
    drawBoundaries()
-   frameTimer = setTimeout(nextFrame, 10)
-
+   
+   lastTime = Date.now()
+   mainLoop() 
 
 $(document).ready init
 
