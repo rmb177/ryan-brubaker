@@ -111,7 +111,7 @@ rotateSquare = (degrees) ->
    recalculateNormal(planes[2], currentBoundaryPoints[2], currentBoundaryPoints[3])
    recalculateNormal(planes[3], currentBoundaryPoints[3], currentBoundaryPoints[0])
 
-mainLoop = =>
+mainLoop = ->
    now = Date.now()
    delta = (now - lastTime) / 1000
    

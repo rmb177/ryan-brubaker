@@ -29,7 +29,7 @@ render = ->
       if (ball.posY < -1 and ball.velocityY < 0) or (ball.posY > 300 and ball.velocityY > 0)
          ball.velocityY = -ball.velocityY  
 
-mainLoop = =>
+mainLoop = ->
    now = Date.now()
    delta = (now - lastTime) / 1000
    
