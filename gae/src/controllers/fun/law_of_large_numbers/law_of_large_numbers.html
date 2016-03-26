@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Law of Large Numbers Demo</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Ryan Brubaker">
+
+      <!-- styles -->
+      <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+         <![endif]-->
+
+   </head>
+   
+   <body>
+      <br />
+      <div class="offset1">
+         <p>
+            Animated demonstration of the law of large numbers. Shows that repeated simulations of a die roll
+            converges to the expected value (3.5) of rolling a die.
+         </p>
+      </div>
+      
+      <div class="row offset1">
+         <span> <label># of Simulations</label> </span>
+         <span> <input id="num-simulations" type="text" /> </span>
+      </div>
+      
+      <div class="offset1">
+         <a class="btn" id="run-simulations">Run Simulations</a>
+      </div>
+      
+      <div id="canvas-div" class="offset1">
+         <canvas id="graph" height="550" width="800" style="border: 2px solid"></canvas>      
+      </div>
+      
+      <script src="/js/jquery-1.7.2.min.js"></script>
+      <script src="/bootstrap/js/bootstrap.min.js"></script>
+      <script src="/js/law_of_large_numbers/law_of_large_numbers.js"></script
+   </body>
+</html>

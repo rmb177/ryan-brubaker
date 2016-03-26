@@ -23,12 +23,6 @@ handlers:
 
 - url: /
   script: src.controllers.home.app
-
-- url: /fun/morse-code/?
-  script: src.controllers.fun.morse_code.morse_code.app
-  
-- url: /fun/turing-machine/?
-  script: src.controllers.fun.turing_machine.turing_machine.app
   
 - url: /fun/collision-detection/balls-in-box/?
   script: src.controllers.fun.collision_detection.balls_in_box.app
@@ -38,6 +32,15 @@ handlers:
 
 - url: /fun/collision-detection/pong/?
   script: src.controllers.fun.collision_detection.pong.app
+  
+- url: /fun/law-of-large-numbers/?
+  script: src.controllers.fun.law_of_large_numbers.law_of_large_numbers.app
+
+- url: /fun/morse-code/?
+  script: src.controllers.fun.morse_code.morse_code.app
+  
+- url: /fun/turing-machine/?
+  script: src.controllers.fun.turing_machine.turing_machine.app
 
 libraries:
 - name: webapp2
