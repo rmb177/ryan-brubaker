@@ -15,8 +15,6 @@ class Home(webapp2.RequestHandler):
    Displays the main page of my website
    """
    def get(self):
-      print("Hello there")
-      print(os.path.dirname(__file__)) 
       template = JINJA_ENV.get_template('home/home.html')
       self.response.write(template.render())
    #

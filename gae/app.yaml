@@ -30,6 +30,11 @@ handlers:
 - url: /about
   script: src.pages.about.about.app
   
+
+## Articles
+- url: /articles/should_developers_design
+  script: src.pages.articles.should_developers_design.should_developers_design.app
+  
 #- url: /fun/collision-detection/balls-in-box/?
 #  script: src.controllers.fun.collision_detection.balls_in_box.app
   

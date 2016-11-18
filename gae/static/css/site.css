@@ -6,11 +6,20 @@ body
    font-family: 'Montserrat', sans-serif;   
 }
 
+h3
+{
+    margin-left: 1em;
+}
 
 p
 {
-    margin: 1em 2em 0em 2em;
+    margin: 1em 4em 0em 2em;
     color: #666;
+}
+
+li
+{
+    margin-top: .5em;
 }
 
 .quote
@@ -30,11 +39,13 @@ p
     width: 100%;
 }
 
-.row{
+.row
+{
     overflow: hidden; 
 }
 
-[class*="col-"]{
+[class*="col-"]
+{
     margin-bottom: -99999px;
     padding-bottom: 99999px;
 }
@@ -45,4 +56,11 @@ p
     align-items:center;
     display:flex;
     margin-top: 2em;
+}
+
+.post-image
+{
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
 }
