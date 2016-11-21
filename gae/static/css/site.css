@@ -58,9 +58,16 @@ li
     margin-top: 2em;
 }
 
-.post-image
+.post-image-left
 {
     float: left;
     margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+.post-image-right
+{
+    float: right;
+    margin-left: 1em;
     margin-bottom: 1em;
 }

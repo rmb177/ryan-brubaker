@@ -32,6 +32,10 @@ handlers:
   
 
 ## Articles
+
+- url: /articles/to_degree_or_not_to_degree
+  script: src.pages.articles.to_degree_or_not_to_degree.to_degree_or_not_to_degree.app
+
 - url: /articles/should_developers_design
   script: src.pages.articles.should_developers_design.should_developers_design.app
   
