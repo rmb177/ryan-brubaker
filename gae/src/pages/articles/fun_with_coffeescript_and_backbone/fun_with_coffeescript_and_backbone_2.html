@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Fun with Coffeescript and Backbone.js (Part 2)</h3>
+
+<p>
+   Part 1 of this series can be read <a href="/articles/fun_with_coffeescript_and_backbone_1">here</a>.
+</p>
+
+<p>
+   The project is a simplified morse code simulator that animates morse code being sent over a telegraph line. The 
+   complete source is available <a href="https://github.com/rmb177/MorseCode">here</a> and the running code can be 
+   seen <a href="/doodles/MorseCode">here</a>.   
+</p>
+
+<p>
+   In this post I’ll discuss the code that handles updating the UI.
+</p>
+
+<h5>Communication Line View</h5>
+
+<script src="https://gist.github.com/2886084.js"></script>
+
+<p>
+   The CommunicationLineView class is a Backbone.js view class that handles the animation of signals sent across 
+   the communication line. In <a href="/articles/fun_with_coffeescript_and_backbone_1">Part 1</a>, I mentioned that 
+   the model representing the communication line fires a hasNewData event each time the tokens progress one step through 
+   the line. As you can see above, this view is bound to that event and rerenders itself every time it receives the 
+   event. The render method iterates over the current tokens and draws the appropriate token shape for each line position.
+</p>
+
+
+<h5>Decoder Model</h5>
+
+<script src="https://gist.github.com/2886116.js"></script>
+
+<p>
+   The Decoder model is responsible for determining what characters the user has sent across the line. The 
+   processToken function is called each time the tokens on the communication line progress one step through the line. 
+   The decoder processes the current tokens sent by the user anytime it sees 10 or more empty tokens in a row or 
+   receives a word-break token. If the decoder parses a known morse code sequence it fires a parsedCharacter event 
+   letting the message field know it needs to rerender itself.
+</p>
+
+<h5>Decoder View</h5>
+
+<script src="https://gist.github.com/2886198.js"></script>
+
+<p>
+   The Decoder view is a Backbone.js view class that represents a simple text box to display the characters the 
+   user has sent across the line. Anytime the Decoder model emits a parsedCharacter event, the Decoder view appends 
+   the parsed character to the end of its text box.
+</p>
+
+<br />
+<p class="attribution">
+Originally published by my former employer, &copy; Art &amp; Logic: 
+<a href="https://artandlogic.com/2012/06/fun-with-coffeescript-and-backbone-js-part-2/">Fun with Coffeescript and Backbone.js (Part 2)</a>
+</p>
+
+{% endblock content %}

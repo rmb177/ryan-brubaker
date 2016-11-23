@@ -1,14 +1,25 @@
-html,
-body 
+html, body 
 {
    margin: 0;
    padding: 0;
    font-family: 'Montserrat', sans-serif;   
 }
 
+body
+{
+    margin-bottom: 2em;
+}
+
 h3
 {
     margin-left: 1em;
+}
+
+h5
+{
+    font-style: italic;
+    margin-left: 2em;
+    margin-top: 2em;
 }
 
 p
@@ -70,4 +81,18 @@ li
     float: right;
     margin-left: 1em;
     margin-bottom: 1em;
+}
+
+
+.attribution
+{
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    padding-top: 1em;
+}
+
+.gist
+{
+    margin-top: 2em;
+    margin-left: 2em;
 }

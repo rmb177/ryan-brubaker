@@ -39,6 +39,14 @@ handlers:
 - url: /articles/should_developers_design
   script: src.pages.articles.should_developers_design.should_developers_design.app
   
+  
+- url: /articles/fun_with_coffeescript_and_backbone_1
+  script: src.pages.articles.fun_with_coffeescript_and_backbone.fun_with_coffeescript_and_backbone_1.app
+
+- url: /articles/fun_with_coffeescript_and_backbone_2
+  script: src.pages.articles.fun_with_coffeescript_and_backbone.fun_with_coffeescript_and_backbone_2.app
+
+  
 #- url: /fun/collision-detection/balls-in-box/?
 #  script: src.controllers.fun.collision_detection.balls_in_box.app
   
