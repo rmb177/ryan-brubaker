@@ -46,6 +46,9 @@ handlers:
 - url: /articles/fun_with_coffeescript_and_backbone_2
   script: src.pages.articles.fun_with_coffeescript_and_backbone.fun_with_coffeescript_and_backbone_2.app
 
+- url: /articles/fun_with_coffeescript_and_backbone_3
+  script: src.pages.articles.fun_with_coffeescript_and_backbone.fun_with_coffeescript_and_backbone_3.app
+
   
 #- url: /fun/collision-detection/balls-in-box/?
 #  script: src.controllers.fun.collision_detection.balls_in_box.app

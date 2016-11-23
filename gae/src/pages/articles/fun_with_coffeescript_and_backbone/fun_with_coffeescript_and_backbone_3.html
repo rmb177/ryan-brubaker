@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Fun with Coffeescript and Backbone.js (Part 3)</h3>
+
+<p>
+   Part 1 of this series can be read <a href="/articles/fun_with_coffeescript_and_backbone_1">here</a>.
+</p>
+
+
+<p>
+   Part 2 of this series can be read <a href="/articles/fun_with_coffeescript_and_backbone_2">here</a>.
+</p>
+
+<p>
+   In this post I’ll discuss my thoughts on 
+   <a href="http://coffeescript.org/">CoffeeScript</a> and 
+   <a href="http://backbonejs.org/">Backbone.js</a>.
+</p>
+
+<p>
+   The project is a simplified morse code simulator that animates morse code being sent over a telegraph line. The 
+   complete source is available <a href="https://github.com/rmb177/MorseCode">here</a> and the running code can be 
+   seen <a href="/doodles/MorseCode">here</a>.   
+</p>
+
+<p>
+   JavaScript has slowly become my favorite programming language as I’ve done more web development. As you learn its 
+   <a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742/ref=sr_1_1?ie=UTF8&amp;qid=1339122559&amp;sr=8-1">Good Parts</a>, 
+   you start to realize how powerful of a language it is. I’ll never forget the Aha! moment I had when I wrote my 
+   first closure.
+</p>
+
+<p>
+   <img src="/img/coffeescript.png" class="post-image-left"/>
+   CoffeeScript takes a great language and makes it even better. It hides the bad parts of JavaScript and adds the 
+   expressiveness of Ruby and Python. The addition of classes shields the developer from JavaScript’s prototypal 
+   inheritance and is much easier to understand for developers used to class-based inheritance. Admittedly, this was a 
+   small demo, but tracking runtime errors in the JavaScript code back to the CoffeeScript code was trivial. I definitely 
+   plan to use CoffeeScript as much as possible in future projects.
+</p>
+
+<p>
+   <img src="/img/backbone.png" class="post-image-left"/>
+   This demo only scratched the surface of Backbone.js. Views can be initialized with templates, making complex models 
+   easier to render. Backbone.js also provides functionality to automatically synch your objects to/from a server, 
+   provides support for collections and also provides routing functionality to ensure the back button works in single-page 
+   applications. I’m very interested in learning more about Backbone.js and using it to reduce the amount of front-end code 
+   I need to write.
+</p>
+
+<p>
+   In general, I think the combination of CoffeeScript and Backbone.js results in a much cleaner application. View code 
+   is segregated from the model code and developers are forced into keeping things more modular. This style would also 
+   make unit testing easier. I’m anxious to continue experimenting with both of these technologies to see how they boost 
+   my productivity and allow me to develop larger web-apps in a more controlled manner.
+</p>
+   
+<br />
+<p class="attribution">
+Originally published by my former employer, &copy; Art &amp; Logic: 
+<a href="https://artandlogic.com/2012/06/fun-with-coffeescript-and-backbone-js-part-3/">Fun with Coffeescript and Backbone.js (Part 3)</a>
+</p>
+
+{% endblock content %}
