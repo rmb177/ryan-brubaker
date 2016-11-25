@@ -54,6 +54,9 @@ handlers:
 - url: /articles/prototypal_vs_functional_inheritance_in_javascript/?
   script: src.pages.articles.prototypal_vs_functional_inheritance_in_javascript.prototypal_vs_functional_inheritance_in_javascript.app
   
+- url: /articles/whither_project_management/?
+  script: src.pages.articles.whither_project_management.whither_project_management.app
+
   
 ## Doodles
 - url: /doodles/morse_code/?
