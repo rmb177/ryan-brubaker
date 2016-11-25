@@ -1,20 +1,147 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Morse Code Simulator</h3>
+
+<div class="container" style="-webkit-user-select: none; -moz-user-select: none;">
+   <ul>
+      <li>Dot: Click the Signal button to send a Dot.</li>
+      <li>Dash: Click and hold the Signal button for 1/4 of a second or more to send a Dash.</li>
+      <li>
+         Word separator: Click and hold the Signal button for 1 second or more to send a word separator
+         (a vertical bar).
+      </li>
+      <li>
+         The decoder "operates" on one character at a time. Let the communication line empty out before starting
+         a new character. There will be a small delay before the character is output to the screen, but you can still
+         begin the next character once the communication line is empty.
+      </li>
+      <li>The decoder ignores any dot/dash combination that it doesn't understand</li>
+   </ul>
+
+
+   <div id="morse-code-sim" class="row">
+      <div id="straight-key-div" class="col-md-1">
+         <button type="button" class="btn" id="straight-key">Signal</button>
+      </div>
+   
+      <div id="communication-line-div" class="col-md-6">
+         <canvas id="communicationLineCanvas" width="500" height="50"></canvas>
+      </div>
+   
+      <div id="messageBoxDiv" class="col-md-1">
+         <textarea id="messageBox"></textarea>
+      </div>
+   </div>
+   
+   
+   <div id="morse-code-chart" class="row">
+      <div class="col-md-8">
+      <table class="table table-bordered">
+         <tr>
+            <td>A</td>
+            <td>&#149 &#150</td>
+            <td>J</td>
+            <td>&#149 &#150 &#150 &#150</td>
+            <td>S</td>
+            <td>&#149 &#149 &#149</td>
+         </tr>
+         <tr>
+            <td>B</td>
+            <td>&#150 &#149 &#149 &#149</td>
+            <td>K</td>
+            <td>&#150 &#149 &#150</td>
+            <td>T</td>
+            <td>&#150</td>
+         </tr>
+         <tr>
+            <td>C</td>
+            <td>&#150 &#149 &#150 &#149</td>
+            <td>L</td>
+            <td>&#149 &#150 &#149 &#149</td>
+            <td>U</td>
+            <td>&#149 &#149 &#150</td>
+         </tr>
+         <tr>
+            <td>D</td>
+            <td>&#150 &#149 &#149</td>
+            <td>M</td>
+            <td>&#150 &#150</td>
+            <td>V</td>
+            <td>&#149 &#149 &#149 &#150</td>
+         </tr>
+         <tr>
+            <td>E</td>
+            <td>&#149</td>
+            <td>N</td>
+            <td>&#150 &#149</td>
+            <td>W</td>
+            <td>&#149 &#150 &#150</td>
+         </tr>
+         <tr>
+            <td>F</td>
+            <td>&#149 &#149 &#150 &#149</td>
+            <td>O</td>
+            <td>&#150 &#150 &#150</td>
+            <td>X</td>
+            <td>&#150 &#149 &#149 &#150</td>
+         </tr>
+         <tr>
+            <td>G</td>
+            <td>&#150 &#150 &#149</td>
+            <td>P</td>
+            <td>&#149 &#150 &#150 &#149</td>
+            <td>Y</td>
+            <td>&#150 &#149 &#150 &#150</td>
+         </tr>
+         <tr>
+            <td>H</td>
+            <td>&#149 &#149 &#149 &#149</td>
+            <td>Q</td>
+            <td>&#150 &#150 &#149 &#150</td>
+            <td>Z</td>
+            <td>&#150 &#150 &#149 &#149</td>
+         </tr>
+         <tr>
+            <td>I</td>
+            <td>&#149 &#149</td>
+            <td>R</td>
+            <td>&#149 &#150 &#149</td>
+            <td />
+            <td />
+         </tr>
+      </table>
+   </div>
+   </div>
+</div>
+{% endblock content %}
+
+
+{% block scripts %}
+   <script src="/js/underscore-min.js"></script>
+   <script src="/js/backbone-min.js"></script>
+   <script src="/js/morse_code/morse_code.js"></script>   
+{% endblock scripts %}
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="utf-8">
       <title>Morse Code</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="author" content="Ryan Brubaker">
+      <meta name="author" content="Ryan Brubaker"> -->
 
       <!-- styles -->
-      <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+<!--      <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"> -->
     
       <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
       <!--[if lt IE 9]>
          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
          <![endif]-->
-
+<!--
    </head>
    
    <body>
@@ -133,7 +260,7 @@
          </div>
       </div>
       
-      <script src="/js/jquery-1.7.2.min.js"></script>
+      <script src="/js/jquery-3.1.0.min.js"></script>
       <script src="/bootstrap/js/bootstrap.min.js"></script>
       <script src="/js/underscore-min.js"></script>
       <script src="/js/backbone-min.js"></script>
@@ -142,4 +269,4 @@
 
    </body>
 
-</html>
+</html> -->

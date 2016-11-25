@@ -30,6 +30,7 @@ p
 
 li
 {
+    color: #666;
     margin-top: .5em;
 }
 
@@ -92,6 +93,19 @@ li
 }
 
 .gist
+{
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+
+#morse-code-sim
+{
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+#morse-code-chart
 {
     margin-top: 2em;
     margin-left: 2em;
