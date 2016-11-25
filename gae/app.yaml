@@ -48,6 +48,8 @@ handlers:
 - url: /articles/fun_with_coffeescript_and_backbone_3/?
   script: src.pages.articles.fun_with_coffeescript_and_backbone.fun_with_coffeescript_and_backbone_3.app
   
+- url: /articles/turn_your_mac_into_a_thermometer_with_arduino/?
+  script: src.pages.articles.turn_your_mac_into_a_thermometer_with_arduino.turn_your_mac_into_a_thermometer_with_arduino.app
   
   
 ## Doodles

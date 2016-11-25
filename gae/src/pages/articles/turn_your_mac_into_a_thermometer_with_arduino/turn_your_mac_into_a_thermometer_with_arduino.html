@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Turn Your Mac into a Thermometer with Arduino</h3>
+
+<p>
+   <img src="/img/arduino.jpg" class="post-image-left" width="300" height="224">
+   The topic of the <a href="https://www.arduino.cc/">Arduino</a> came up around A&amp;L’s “virtual water cooler” last week. 
+   About a year and a half ago, I purchased a <a href="https://www.sparkfun.com/products/retired/10173">SparkFun Inventor’s 
+   Kit for Arduino</a>. The kit is a fun way for a hardware novice like me to get started and learn some basics. It comes 
+   with more than a dozen sample projects such as lighting LEDs, spinning a motor, and generating audio.
+</p>
+
+<p>
+   Inspired by the discussion at A&amp;L, I pulled my kit out this past weekend and put together the sample circuit that 
+   reads temperature. In addition to learning hardware, another ulterior motive in my Arduino purchase was to get my son 
+   interested in electronics. He’s still a little young to really understand everything and instead likes to pretend the 
+   breadboard is a train. It makes it a little hard to put the circuit together as the “circuit train” travels around the 
+   tracks. But he does enjoy seeing the end result and playing with the circuits we make.
+</p>
+
+<p>
+   <img src="/img/thermometer.png" class="post-image-right" width="110" height="220">
+   Because the sample temperature project just prints numbers to a console window, I thought I’d spruce it up for my son 
+   a little bit and write a UI that simulated a thermometer. I found some <a href="http://playground.arduino.cc/Interfacing/Java">
+   Java code</a> on an Arduino Playground page that reads the temperature measurements written to the serial port by the 
+   Arduino board. Getting everything in place was just a matter of wiring up the 
+   <a href="http://ardx.org/src/circ/CIRC10-sheet-OOML.pdf">SparkFun schematic</a>, integrating the Java code and writing 
+   a little thermometer widget. All of the resources needed for this project can be found 
+   <a href="https://github.com/rmb177/ArduinoThermometer">here</a>.
+</p>
+
+<p>
+   I finished everything up late last evening so my son has yet to see the end result. Something tells me he would be more 
+   impressed if I animated steam coming out of a train engine to represent the temperature.
+</p>
+
+<p>
+   There was a recent 
+   <a href="http://www.ted.com/talks/massimo_banzi_how_arduino_is_open_sourcing_imagination.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+TEDTalks_video+%28TEDTalks+Main+%28SD%29+-+Site%29">
+   TED</a> talk by one of the creators of Arduino. It’s fascinating to see the types of projects people are completing with 
+   the Arduino. I think we’re in for a fascinating future.
+</p>
+
+
+<br />
+
+<p class="attribution">
+Originally published by my former employer, &copy; Art &amp; Logic: <a href="https://artandlogic.com/2012/06/turn-your-mac-into-a-thermometer-with-arduino/">Turn Your Mac into a Thermometer with Arduino</a>
+{% endblock content %}
