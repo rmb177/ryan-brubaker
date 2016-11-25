@@ -50,6 +50,9 @@ handlers:
   
 - url: /articles/turn_your_mac_into_a_thermometer_with_arduino/?
   script: src.pages.articles.turn_your_mac_into_a_thermometer_with_arduino.turn_your_mac_into_a_thermometer_with_arduino.app
+
+- url: /articles/prototypal_vs_functional_inheritance_in_javascript/?
+  script: src.pages.articles.prototypal_vs_functional_inheritance_in_javascript.prototypal_vs_functional_inheritance_in_javascript.app
   
   
 ## Doodles
