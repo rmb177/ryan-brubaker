@@ -10,9 +10,9 @@ JINJA_ENV = jinja2.Environment(
  extensions=['jinja2.ext.autoescape'],
  autoescape=True)
  
-class FunWithCoffeescriptAndBackbone1(webapp2.RequestHandler):
+class FunWithCoffeeScriptAndBackbone1(webapp2.RequestHandler):
    """
-   Displays article Fun with Coffeescript and Backbone.js (Part 1)
+   Displays article Fun with CoffeeScript and Backbone.js (Part 1)
    """
    def get(self):
       template = JINJA_ENV.get_template('articles/fun_with_coffeescript_and_backbone/fun_with_coffeescript_and_backbone_1.html')
@@ -20,4 +20,4 @@ class FunWithCoffeescriptAndBackbone1(webapp2.RequestHandler):
    #
 #
 
-app = webapp2.WSGIApplication([('/articles/fun_with_coffeescript_and_backbone_1', FunWithCoffeescriptAndBackbone1)])
+app = webapp2.WSGIApplication([('/articles/fun_with_coffeescript_and_backbone_1', FunWithCoffeeScriptAndBackbone1)])
