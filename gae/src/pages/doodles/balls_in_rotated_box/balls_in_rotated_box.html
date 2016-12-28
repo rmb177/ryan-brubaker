@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Balls in a Rotated Box
+{% endblock page_title %}
+
+
+{% block content %}
+
+   <h3>Balls in a Rotated Box</h3>
+
+
+   <p>
+      Collision detection with an inner boundary that is rotated and using normal vectors for collision detection. I'm still
+      using center of ball as collision point.
+   </p>
+   
+   <canvas id="bounds" height="500" width="500" style="border: 2px dotted"></canvas>      
+
+
+{% endblock content %}
+
+
+
+{% block scripts %}
+   <script src="/js/request_animation_frame_shim.js"></script>
+   <script src="/js/collision_detection/util.js"></script>
+   <script src="/js/collision_detection/rotate_box.js"></script>
+{% endblock scripts %}
+

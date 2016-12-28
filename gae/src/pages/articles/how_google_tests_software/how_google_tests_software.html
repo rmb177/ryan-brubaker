@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Book Review: How Google Tests Software
+{% endblock page_title %}
+
+{% block content %}
+
+<h3>Book Review: How Google Tests Software</h3>
+
+<p>
+   <img src="/img/how_google_tests_software.jpg" class="post-image-left" />
+   This past week I finished reading the very interesting book, 
+   <a href="http://www.amazon.com/Google-Tests-Software-James-Whittaker/dp/0321803027/ref=sr_1_1?ie=UTF8&qid=1367289843&sr=8-1">How Google Tests Software</a>. 
+   I first heard about this book from an 
+   <a href="http://web.archive.org/web/20130729200600id_/http://itc.conversationsnetwork.org/shows/detail5300.html">IT-Conversations interview</a> 
+   with one of its co-authors, James Whittaker. The interview provides a good overview of many of the key points made in the book, but 
+   I still found it worthwhile to read the book.
+</p>
+
+<p>
+   The book itself is not a how-to book, providing concrete steps on how to test software. Instead the focus is at a higher level 
+   with much of the book devoted to describing the different testing roles within the company. There were three particular themes 
+   that jumped out at me from both the interview and the book itself.
+</p>
+
+<h5>Scale</h5>
+<p>
+   The amount of effort Google devotes to testing/quality is very impressive. The infrastructure they have set up for automated 
+   builds, automated regression testing, latency testing, code reviews, and user feedback makes one’s head swim. It’s hard to 
+   imagine how such a web of software can function when you combine the complexity of these tools along with the complexity of 
+   their products. At the same time, it’s easy to see how the complexity of their products would never have been achieved without 
+   the testing tools they’ve developed.
+</p>
+
+
+<h5>Pragmatism</h5>
+
+<p>
+   Google seems to be very pragmatic when it comes to testing. If a certain set of automated tests are hard to maintain they get 
+   rid of them. If a certain feature is not high risk or not high impact, don’t even worry about testing it (or better yet just 
+   eliminate the feature). Instead of writing test plans that become dated the minute they’re finished, Google focuses on the 
+   ACC (Attributes, Components, Capabilities) model. These three areas describe a software application in the following way
+   <ul>
+      <li>Attributes: These are the adjectives of the system, usually sales and marketing oriented (e.g. fast, secure, stable).</li>
+      <li>Components: These are the nouns of the system (e.g. shopping cart, printing/formatting feature).</li>
+      <li>Capabilities: These are the verbs of the system (e.g. add item to shopping cart, calculate shipping cost).</li>
+   </ul>
+</p>
+
+<p>
+   Test cases should then map back to at least one item from each list to ensure the main functionality of the application is 
+   being tested and no effort is wasted.
+</p>
+
+<p>
+   Another interesting point is that Google purposely keeps their test staff numbers low to make sure testing effort is prioritized. 
+   Minimizing test staff also forces developers to be involved with testing throughout the life of the project, especially in the 
+   early phases when it’s easier to build up test infrastructure.
+</p>
+
+<h5>Future of Testing</h5>
+
+<p>
+   Finally, the authors have a pretty grand vision for software testing in the future (at least for commercial applications). The 
+   traditional test role will disappear and will be replaced by developer testing and automated testing. Instead of relying on 
+   manual testers, software teams will rely on internal dogfooders along with crowd sourced beta users/early adopters. The traditional 
+   testing role will transform into one in which the “tester” develops test tools, develops user feedback tools, and handles user bug 
+   report submissions. It’s a grand vision, one which I think a company with the size and scale of Google could achieve. I have a hard 
+   time envisioning this process working for smaller companies. After all, not every company has 20,000 dogfooders available to test 
+   Google Chrome. But as testing tools improve and more OSS becomes available in this area, it seems like the trend will move that way.
+</p>
+
+<p>
+   As someone who has struggled to integrate TDD into my daily workflow, I found this book really motivating. It was encouraging to 
+   see a pragmatic attitude as something I can adopt and not let the perfect be the enemy of the good. Isolating a section of code 
+   for which tests will be easy to maintain and will help mitigate a high-risk area of the application can be a worthwhile starting 
+   point instead of worrying about 100% test coverage.
+</p>
+
+
+{% endblock content %}
+
+
+
+
+
+

@@ -1,3 +1,137 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Turing Machine Simulator
+{% endblock page_title %}
+
+{% block other_css %}
+<style type="text/css"> 
+            .table
+            {
+               width: 75%;
+            }
+            .table th, .table td
+            {
+               border: 1px solid;    
+            }
+            .table th:first-child, .table tbody tr td:first-child
+            {
+               border: 0;
+               padding-top: 25%;
+               padding-right: 25%;
+            }
+            .table tbody tr:hover td,.table tbody tr:hover th
+            {
+               background-color:#ffffff;
+            }
+            
+            .table tbody tr td
+            {
+               margin: 0;
+               padding: 0;
+            }
+            
+            td input
+            {
+               margin: 0;
+            }
+      </style>
+{% endblock other_css %}
+
+{% block content %}
+
+<h3>Turing Machine Simulator</h3>
+
+<div class="container">
+   
+   <div class="row">
+      <div id="turingDiv" class="span6">
+         <canvas id="paperTapeCanvas" width="900" height="50" style="border: 2px solid"></canvas>
+      </div>
+   </div>
+   
+   <div class="row">
+      <button type="button" class="btn" id="start-machine">Start</button>
+      <button type="button" class="btn" id="clear-machine">Clear</button>
+      <button type="button" class="btn offset1" id="alternating-machine">0101010...</button>
+      <button type="button" class="btn" id="one-fourth-machine">1/4</button>
+      <button type="button" class="btn" id="sequences-of-ones">001011011101111011111...</button>
+   </div>
+   
+   <div class="row">
+      <ul>
+         <li>
+            You can specify multiple symbols for a given state by adding a new entry under the first state entry and leaving the &quot;State Name&quot; column blank.
+         </li>
+         <li>
+            The first state in the table will be considered the initial state.
+         </li>
+         <li>
+            Valid symbols are any single character, &quot;any&quot; for any non-blank character or &quot;none&quot; for a blank square.
+         </li>
+         <li>
+            The &quot;any&quot; symbol is considered a fallback symbol if the state has any other symbols associated with it.
+         </li>
+         <li>
+            Valid operations are a comma-separated list of the following items (e.g. &quot;R, R, P1&quot;):
+            <ul>
+               <li>L: Shift head left</li>
+               <li>R: Shift head right</li>
+               <li>Px: Print x, where x can be any character</li>
+               <li>E: Erase character</li>
+            </ul>
+         </li>
+      </ul>
+   </div>
+   
+   
+   <table style="display:none;">
+      <tbody>
+         <tr id="stateRowTemplate">
+            <td class="pull-right"><i class="glyphicon glyphicon-plus"></i></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+         </tr>
+      </tbody>
+   </table>
+   
+   <div class="row">
+      <table id="stateMachineTable" class="table table-condensed" style="border: 0;">
+         <tbody>
+            <tr>
+               <th class="pull-right"><i class="glyphicon glyphicon-plus"></i></th>
+               <th>State Name</th>
+               <th>Symbol</th>
+               <th>Operations</th>
+               <th>Result State</th>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>
+
+<script type="text/javascript">
+   window.Turing = {}
+</script>
+
+
+{% endblock content %}
+
+
+
+{% block scripts %}
+   <script src="/js/turing_machine/machines.js"></script>
+   <script src="/js/turing_machine/state.js"></script>
+   <script src="/js/turing_machine/stateMachine.js"></script>
+   <script src="/js/turing_machine/tape.js"></script>
+   <script src="/js/turing_machine/turing.js"></script>
+{% endblock scripts %}
+
+
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -6,14 +140,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="Ryan Brubaker">
 
-      <!-- styles -->
+      <!-- styles
       <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
       <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
     
-      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-      <!--[if lt IE 9]>
-         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-         <![endif]-->
 
       <style type="text/css"> 
             .table
@@ -130,4 +260,4 @@
       <script src="/js/turing_machine/turing.js"></script>
    </body>
 
-</html>
+</html> -->

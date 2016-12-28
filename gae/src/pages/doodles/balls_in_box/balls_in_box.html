@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Balls in a Box
+{% endblock page_title %}
+
+
+{% block content %}
+
+   <h3>Balls in a Box</h3>
+
+
+   <p>
+      Demo to detect ball collision against a box border. Collision detection is done based on center point of ball.
+   </p>
+   
+   <canvas id="bounds" height="300" width="300" style="border: 2px solid"></canvas>        
+
+
+{% endblock content %}
+
+
+
+{% block scripts %}
+   <script src="/js/request_animation_frame_shim.js"></script>
+   <script src="/js/collision_detection/util.js"></script>
+   <script src="/js/collision_detection/balls_in_a_box.js"></script>
+{% endblock scripts %}
+

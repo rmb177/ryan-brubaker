@@ -118,8 +118,9 @@
       if (addedRows.length > 0) {
         addedRows.remove();
         addRowCell = $(document.createElement('i'));
-        addRowCell.addClass('icon-plus-sign');
-        return $('#stateMachineTable th:first-child').html('<i class="icon-plus-sign"></i>');
+        addRowCell.addClass('glyphicon');
+        addRowCell.addClass('glyphicon-plus');
+        return $('#stateMachineTable th:first-child').html('<i class="glyphicon glyphicon-plus"></i>');
       }
     };
     addRowToTable = function() {
@@ -161,7 +162,7 @@
       });
     });
     $(function() {
-      return $('#stateMachineTable').on('click', '.icon-plus-sign', function(eventObject) {
+      return $('#stateMachineTable').on('click', '.glyphicon-plus', function(eventObject) {
         addRowToTable();
         return $(eventObject.target).parent().empty();
       });
@@ -169,7 +170,7 @@
     setPreconfiguredMachine = function(machine) {
       var i, newRow, numRow, numRows, rowValues, textFields, _i, _j, _len, _ref, _results;
       clearTable();
-      $('#stateMachineTable').find('.icon-plus-sign').remove();
+      $('#stateMachineTable').find('.glyphicon-plus').remove();
       numRows = machine.length;
       numRow = 0;
       _results = [];
@@ -181,7 +182,7 @@
           textFields[i].value = rowValues[i];
         }
         if (numRow < (numRows - 1)) {
-          newRow.find('.icon-plus-sign').remove();
+          newRow.find('.glyphicon-plus').remove();
         }
         _results.push(numRow += 1);
       }

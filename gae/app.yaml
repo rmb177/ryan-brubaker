@@ -56,13 +56,31 @@ handlers:
   
 - url: /articles/whither_project_management/?
   script: src.pages.articles.whither_project_management.whither_project_management.app
+  
+- url: /articles/annotated_turing_with_simulator/?
+  script: src.pages.articles.annotated_turing_with_simulator.annotated_turing_with_simulator.app
 
+- url: /articles/game_on/?
+  script: src.pages.articles.game_on.game_on.app
+  
+- url: /articles/can_i_hold_you_to_that/?
+  script: src.pages.articles.can_i_hold_you_to_that.can_i_hold_you_to_that.app
+  
+- url: /articles/how_google_tests_software/?
+  script: src.pages.articles.how_google_tests_software.how_google_tests_software.app
   
 ## Doodles
 - url: /doodles/morse_code/?
   script: src.pages.doodles.morse_code.morse_code.app
+  
+- url: /doodles/turing_machine_simulator/?
+  script: src.pages.doodles.turing_machine_simulator.turing_machine_simulator.app
 
+- url: /doodles/balls_in_box/?
+  script: src.pages.doodles.balls_in_box.balls_in_box.app
 
+- url: /doodles/balls_in_rotated_box/?
+  script: src.pages.doodles.balls_in_rotated_box.balls_in_rotated_box.app
   
 #- url: /fun/collision-detection/balls-in-box/?
 #  script: src.controllers.fun.collision_detection.balls_in_box.app

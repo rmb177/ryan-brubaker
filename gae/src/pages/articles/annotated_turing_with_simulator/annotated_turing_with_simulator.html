@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Annotated Turing (with Simulator)
+{% endblock page_title %}
+
+{% block content %}
+
+<h3>Annotated Turing (with Simulator)</h3>
+
+<p>
+   <img src="/img/annotated_turing.jpg" class="post-image-left">
+   I’m currently making my way through Charles Petzold’s book <i>The Annotated Turing</i>. Petzold’s book, <i>Code: The Hidden Language 
+   of Computer Hardware</i>, is a must read for any software developer and is my favorite computer-related book. <i>The Annotated Turing</i> 
+   is proving to be just as interesting.
+</p>
+
+<p>
+   I’m only halfway through the book so I can’t provide a complete review. The first few chapters discuss Alan Turing’s educational 
+   background along with some introductory information on computability and number theory.
+</p>
+
+<p>
+   Petzold then breaks down Turing’s seminal paper, <i>On Computable  Numbers, With an Application to the Entscheidungsproblem</i>. 
+   I started this book thinking much of the information would be over my head, but Petzold does a great job of breaking things down 
+   and providing easy-to-understand explanations.
+</p>
+
+<p>
+   Along with Petzold’s commentary, I decided it would be helpful to create a Turing Machine simulator that I could use as I read 
+   through the book. The source code can be found 
+   <a href="https://github.com/rmb177/turing-machine">here</a> and a running demo can be found 
+   <a href="/doodles/turing_machine_simulator">here</a>. 
+   The demo includes some pre-configured Turing machine samples from the book, but allows you to define your own machine. Since 
+   I’m only halfway through the book, the simulator likely does not simulate the Universal Turing Machine that Turing ultimately 
+   designed. I’m hoping to continue updating the code as I finish the rest of the book.
+</p>
+
+<p>
+   So go out and grab the book, test out different machines on the simulator (or better yet, write your own simulator) and see how 
+   the computing age began. It’s a great way to learn about number theory, state machines, and is also a great reminder that we are 
+   all standing on the shoulders of giants.
+</p>
+
+<br />
+
+<p class="attribution">
+Originally published by my former employer, &copy; Art &amp; Logic: <a href="https://artandlogic.com/2012/12/the-annotated-turing-with-simulator/">Annotated Turing (with Simulator)</a>
+</p>
+{% endblock content %}

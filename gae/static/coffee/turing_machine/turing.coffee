@@ -102,8 +102,9 @@ init = ->
       if addedRows.length > 0
          addedRows.remove()
          addRowCell = $(document.createElement('i'))
-         addRowCell.addClass('icon-plus-sign')
-         $('#stateMachineTable th:first-child').html('<i class="icon-plus-sign"></i>')
+         addRowCell.addClass('glyphicon')
+         addRowCell.addClass('glyphicon-plus')
+         $('#stateMachineTable th:first-child').html('<i class="glyphicon glyphicon-plus"></i>')
 
    addRowToTable = ->
       newRow = $('#stateRowTemplate').clone()
@@ -142,7 +143,7 @@ init = ->
             
             
    $ ->
-      $('#stateMachineTable').on('click', '.icon-plus-sign',
+      $('#stateMachineTable').on('click', '.glyphicon-plus',
          (eventObject) -> 
             addRowToTable()
             $(eventObject.target).parent().empty())
@@ -150,7 +151,7 @@ init = ->
    
    setPreconfiguredMachine = (machine) ->
       clearTable()
-      $('#stateMachineTable').find('.icon-plus-sign').remove()
+      $('#stateMachineTable').find('.glyphicon-plus').remove()
       numRows = machine.length
       numRow = 0
       for rowValues in machine
@@ -159,7 +160,7 @@ init = ->
          for i in [0...rowValues.length]
             textFields[i].value = rowValues[i]
             
-         newRow.find('.icon-plus-sign').remove() if numRow < (numRows - 1)
+         newRow.find('.glyphicon-plus').remove() if numRow < (numRows - 1)
          numRow += 1
          
        

@@ -1,2 +1,2 @@
-coffee -o gae/js/  -cw gae/coffee
+coffee -o gae/static/js/  -cw gae/static/coffee
 
