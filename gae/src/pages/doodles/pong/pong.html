@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Pong
+{% endblock page_title %}
+
+
+{% block content %}
+
+   <h3>Pong</h3>
+
+   <div class="row" style="margin-left:20px; margin-top:20px;">
+      <canvas id="score" width="1000" height="50"></canvas>
+   </div>
+      
+   <br />
+   <br />
+   
+   <div class="row" style="margin-left:10px;">
+      <canvas id="bounds" width="1000" height="450"  style="border: 2px solid"></canvas>      
+   </div>
+      
+   <br />
+   
+   <div class="row">
+      <span class="offset1">Left Paddle - Up: W-key, Down: S-key</span>
+      <span class="offset2"><a class="btn" id="playAgainBtn">Play Again</a></span>
+   </div>
+   
+   <div class="row">
+      <span class="offset1">Right Paddle - Up: Up arrow key, Down: Down arrow key</span>
+   </div>
+
+{% endblock content %}
+
+
+
+{% block scripts %}
+   <script src="/js/collision_detection/util.js"></script>
+   <script src="/js/collision_detection/pong.js"></script>
+{% endblock scripts %}
+

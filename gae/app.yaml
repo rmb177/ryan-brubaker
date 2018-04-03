@@ -33,11 +33,14 @@ handlers:
 
 ## Articles
 
-- url: /articles/to_degree_or_not_to_degree/?
-  script: src.pages.articles.to_degree_or_not_to_degree.to_degree_or_not_to_degree.app
+- url: /articles/\d
+  script: src.pages.articles.articles.app
 
 - url: /articles/should_developers_design/?
   script: src.pages.articles.should_developers_design.should_developers_design.app
+ 
+- url: /articles/to_degree_or_not_to_degree/?
+  script: src.pages.articles.to_degree_or_not_to_degree.to_degree_or_not_to_degree.app
   
 - url: /articles/fun_with_coffeescript_and_backbone_1/?
   script: src.pages.articles.fun_with_coffeescript_and_backbone.fun_with_coffeescript_and_backbone_1.app
@@ -70,6 +73,10 @@ handlers:
   script: src.pages.articles.how_google_tests_software.how_google_tests_software.app
   
 ## Doodles
+
+- url: /doodles/\d
+  script: src.pages.doodles.doodles.app
+  
 - url: /doodles/morse_code/?
   script: src.pages.doodles.morse_code.morse_code.app
   
@@ -81,6 +88,9 @@ handlers:
 
 - url: /doodles/balls_in_rotated_box/?
   script: src.pages.doodles.balls_in_rotated_box.balls_in_rotated_box.app
+  
+- url: /doodles/pong/?
+  script: src.pages.doodles.pong.pong.app
   
 #- url: /fun/collision-detection/balls-in-box/?
 #  script: src.controllers.fun.collision_detection.balls_in_box.app
@@ -107,6 +117,10 @@ handlers:
 #  script: src.controllers.fun.promises.data.app
   
 
+
+## Talks
+- url: /talks/?
+  script: src.pages.talks.talks.app
 
 libraries:
 - name: webapp2
