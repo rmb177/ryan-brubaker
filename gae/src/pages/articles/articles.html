@@ -10,7 +10,7 @@ Articles
 
 {% for article in articles %}
    <div class="row post-container">
-      <div class="col-md-2"><p><img width="100" height="100" src="{{article.imgUrl}}"/></p></div>
+      <div class="col-md-2"><p><a href="{{article.articleUrl}}"><img width="100" height="100" src="{{article.imgUrl}}"/></a></p></div>
       <div class="col-md-10">
          <a href="{{article.articleUrl}}">{{article.title}}</a>
          <p>
