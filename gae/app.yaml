@@ -76,6 +76,9 @@ handlers:
 
 - url: /doodles/\d
   script: src.pages.doodles.doodles.app
+
+- url: /doodles/sum_of_natural_numbers/?
+  script: src.pages.doodles.sum_of_natural_numbers.sum_of_natural_numbers.app
   
 - url: /doodles/morse_code/?
   script: src.pages.doodles.morse_code.morse_code.app

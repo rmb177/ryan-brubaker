@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Sum of Natural Numbers</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Ryan Brubaker">
+         
+      <style>
+         #formulaContainer > span
+         {
+            display: inline-block;
+            font-size: 2em;
+            position: absolute;
+            top: 0px;
+         }
+         
+         .moveDown      {animation-duration: 30s; animation-name: moveDown;     animation-iteration-count:infinite;}
+         #term1         {animation-duration: 30s; animation-name: term1;        animation-iteration-count:infinite;}
+         #plus1         {animation-duration: 30s; animation-name: plus1;        animation-iteration-count:infinite;}
+         #term2         {animation-duration: 30s; animation-name: term2;        animation-iteration-count:infinite;}
+         #plus2         {animation-duration: 30s; animation-name: plus2;        animation-iteration-count:infinite;}
+         #term3         {animation-duration: 30s; animation-name: term3;        animation-iteration-count:infinite;}
+         #plus3         {animation-duration: 30s; animation-name: plus3;        animation-iteration-count:infinite;}
+         #ellipsis      {animation-duration: 30s; animation-name: ellipsis;     animation-iteration-count:infinite;}
+         #plus4         {animation-duration: 30s; animation-name: plus4;        animation-iteration-count:infinite;}
+         #term5         {animation-duration: 30s; animation-name: term5;        animation-iteration-count:infinite;}
+         #plus5         {animation-duration: 30s; animation-name: plus5;        animation-iteration-count:infinite;}
+         #term6         {animation-duration: 30s; animation-name: term6;        animation-iteration-count:infinite;}
+         #plus6         {animation-duration: 30s; animation-name: plus6;        animation-iteration-count:infinite;}
+         #term7         {animation-duration: 30s; animation-name: term7;        animation-iteration-count:infinite;}
+         .fadeIn1       {animation-duration: 30s; animation-name: fadeIn1;      animation-iteration-count:infinite;}
+         .fadeIn2       {animation-duration: 30s; animation-name: fadeIn2;      animation-iteration-count:infinite;}
+         #twoS          {animation-duration: 30s; animation-name: twoS;         animation-iteration-count:infinite;}
+         .sum1          {animation-duration: 30s; animation-name: sum1;         animation-iteration-count:infinite;}
+         .sum2          {animation-duration: 30s; animation-name: sum2;         animation-iteration-count:infinite;}
+         .sum3          {animation-duration: 30s; animation-name: sum3;         animation-iteration-count:infinite;}
+         .sum4          {animation-duration: 30s; animation-name: sum4;         animation-iteration-count:infinite;}
+         .sum5          {animation-duration: 30s; animation-name: sum5;         animation-iteration-count:infinite;}
+         .sum6          {animation-duration: 30s; animation-name: sum6;         animation-iteration-count:infinite;}
+         .sum7          {animation-duration: 30s; animation-name: sum7;         animation-iteration-count:infinite;}
+         #factor1       {animation-duration: 30s; animation-name: factor1;      animation-iteration-count:infinite;}
+         #factor2       {animation-duration: 30s; animation-name: factor2;      animation-iteration-count:infinite;}
+         #factor3       {animation-duration: 30s; animation-name: factor3;      animation-iteration-count:infinite;}
+         #factor4       {animation-duration: 30s; animation-name: factor4;      animation-iteration-count:infinite;}
+         #factor5       {animation-duration: 30s; animation-name: factor5;      animation-iteration-count:infinite;}
+         #factor6       {animation-duration: 30s; animation-name: factor6;      animation-iteration-count:infinite;}
+         #factor7       {animation-duration: 30s; animation-name: factor7;      animation-iteration-count:infinite;}
+         #fadeIn3       {animation-duration: 30s; animation-name: fadeIn3;      animation-iteration-count:infinite;}
+
+
+
+         @keyframes moveDown 
+         {
+            from {top:  0px;}
+            10%  {top: 65px;}
+            to   {top: 65px;}
+         }
+         
+         
+         @keyframes term1 
+         {
+            from {top:  0px;}
+            10%  {top: 65px; left: 70px;}
+            20%  {top: 65px; left: 700px;}
+            80%  {background-color:white;}
+            84%  {background-color:lime;}
+            88%  {background-color:white;}
+            to   {top: 65px; left: 700px; background-color:white;}
+         }
+         
+         @keyframes plus1 
+         {
+            from {top:  0px; left: 100px;}
+            10%  {top: 65px; left: 100px;}
+            20%  {top: 65px; left: 670px;}
+            to   {top: 65px; left: 670px;}
+         }
+         
+         @keyframes term2 
+         {
+            from {top:  0px;}
+            10%  {top: 65px; left:160px;}
+            20%  {top: 65px; left:610px;}
+            72%  {background-color:white;}
+            76%  {background-color:lime;}
+            80%  {background-color:white;}
+            to   {top: 65px; left: 610px; background-color:white;}
+         }
+         
+         @keyframes plus2
+         {
+            from {top:  0px; left: 220px;}
+            10%  {top: 65px; left: 220px;}
+            20%  {top: 65px; left: 550px;}
+            to   {top: 65px; left: 550px;}
+         }
+         
+         @keyframes term3
+         {
+            from {top:  0px}
+            10%  {top: 65px; left: 280px;}
+            20%  {top: 65px; left: 490px;}
+            64%  {background-color:white;}
+            68%  {background-color:lime;}
+            72%  {background-color:white;}
+            to   {top: 65px; left: 490px; background-color:white;}
+         }
+         
+         @keyframes plus3
+         {
+            from {top:  0px; left: 340px;}
+            10%  {top: 65px; left: 340px;}
+            20%  {top: 65px; left: 430px;}
+            to   {top: 65px; left: 430px;}
+         }
+         
+         @keyframes ellipsis
+         {
+            from {top:  0px;}
+            10%  {top: 65px;}
+            56%  {background-color:white;}
+            60%  {background-color:lime;}
+            64%  {background-color:white;}
+            to   {top: 65px; left: 380px; background-color:white;}
+         }
+         
+         @keyframes plus4
+         {
+            from {top:  0px; left: 430px;}
+            10%  {top: 65px; left: 430px;}
+            20%  {top: 65px; left: 340px;}
+            to   {top: 65px; left: 340px;}
+         }
+         
+         @keyframes term5
+         {
+            from {top:  0px;}
+            10%  {top: 65px; left: 460px;}
+            20%  {top: 65px; left: 250px;}
+            48%  {background-color:white;}
+            52%  {background-color:lime;}
+            56%  {background-color:white;}
+            to   {top: 65px; left: 250px; background-color:white;}
+         }
+         
+         @keyframes plus5
+         {
+            from {top:  0px; left: 550px;}
+            10%  {top: 65px; left: 550px;}
+            20%  {top: 65px; left: 220px;}
+            to   {top: 65px; left: 220px;}
+         }
+         
+         @keyframes term6
+         {
+            from {top:  0px;}
+            10%  {top: 65px; left: 580px;}
+            20%  {top: 65px; left: 130px;}
+            40%  {background-color:white;}
+            44%  {background-color:lime;}
+            48%  {background-color:white;}
+            to   {top: 65px; left: 130px; background-color:white;}
+         }
+         
+         @keyframes plus6
+         {
+            from {top:  0px; left: 670px;}
+            10%  {top: 65px; left: 670px;}
+            20%  {top: 65px; left: 100px;}
+            to   {top: 65px; left: 100px;}
+         }
+         
+         @keyframes term7
+         {
+            from {top:  0px;}
+            10%  {top: 65px; left: 700px;}
+            20%  {top: 65px; left:  70px;}
+            32%  {background-color:white;}
+            36%  {background-color:lime;}
+            40%  {background-color:white;}
+            to   {top: 65px; left:  70px; background-color:white;}
+         }
+         
+         @keyframes fadeIn1
+         {
+            from {opacity: 0;}
+            20%  {opacity: 0;}
+            25%  {opacity: 1;}
+            to   {opacity: 1;}
+         }
+         
+         @keyframes fadeIn2
+         {
+            from {opacity: 0;}
+            25%  {opacity: 0;}
+            30%  {opacity: 1;}
+            to   {opacity: 1;}
+         }
+         
+          
+         @keyframes twoS
+         {
+            from {opacity: 0;}
+            25%  {opacity: 0;}
+            30%  {opacity: 1;}
+            92%  {left:   0px; top: 120px;}
+            96%  {left: 130px; top: 165px;}
+            to   {opacity: 1; left: 130px; top: 165px; }
+         }
+         
+         
+         @keyFrames sum1
+         {
+            from {background-color:white;}
+            32%  {background-color:white;}
+            36%  {background-color:lime;}
+            40%  {background-color:white;}
+            to   {background-color:white;}
+         }
+         
+         @keyFrames sum2
+         {
+            from {background-color:white;}
+            40%  {background-color:white;}
+            44%  {background-color:lime;}
+            48%  {background-color:white;}
+            to   {background-color:white;}
+         }
+         
+         @keyFrames sum3
+         {
+            from {background-color:white;}
+            48%  {background-color:white;}
+            52%  {background-color:lime;}
+            56%  {background-color:white;}
+            to   {background-color:white;}
+         }
+         
+         @keyFrames sum4
+         {
+            from {background-color:white;}
+            56%  {background-color:white;}
+            60%  {background-color:lime;}
+            64%  {background-color:white;}
+            to   {background-color:white;}
+         }
+         
+         @keyFrames sum5
+         {
+            from {background-color:white;}
+            64%  {background-color:white;}
+            68%  {background-color:lime;}
+            72%  {background-color:white;}
+            to   {background-color:white;}
+         }
+         
+         @keyFrames sum6
+         {
+            from {background-color:white;}
+            72%  {background-color:white;}
+            76%  {background-color:lime;}
+            80%  {background-color:white;}
+            to   {background-color:white;}
+         }
+         
+         @keyFrames sum7
+         {
+            from {background-color:white;}
+            80%  {background-color:white;}
+            84%  {background-color:lime;}
+            88%  {background-color:white;}
+            to   {background-color:white;}
+         }
+         
+         @keyframes factor1
+         {
+            from {opacity: 0;}
+            36%  {opacity: 0;}
+            40%  {opacity: 1;}
+            44%  {opacity: 0;}
+            to   {opacity: 0;}
+         }
+         
+         @keyframes factor2
+         {
+            from {opacity: 0;}
+            44%  {opacity: 0;}
+            48%  {opacity: 1;}
+            52%  {opacity: 0;}
+            to   {opacity: 0;}
+         }
+         
+         @keyframes factor3
+         {
+            from {opacity: 0;}
+            52%  {opacity: 0;}
+            56%  {opacity: 1;}
+            60%  {opacity: 0;}
+            to   {opacity: 0;}
+         }
+         
+         @keyframes factor4
+         {
+            from {opacity: 0;}
+            60%  {opacity: 0;}
+            64%  {opacity: 1;}
+            68%  {opacity: 0;}
+            to   {opacity: 0;}
+         }
+         
+         @keyframes factor5
+         {
+            from {opacity: 0;}
+            68%  {opacity: 0;}
+            72%  {opacity: 1;}
+            76%  {opacity: 0;}
+            to   {opacity: 0;}
+         }
+         
+         @keyframes factor6
+         {
+            from {opacity: 0;}
+            76%  {opacity: 0;}
+            80%  {opacity: 1;}
+            84%  {opacity: 0;}
+            to   {opacity: 0;}
+         }
+         
+         @keyframes factor7
+         {
+            from {left: 195px; opacity: 0;}
+            84%  {opacity: 0;}
+            88%  {opacity: 1;}
+            92%  {left: 195px;}
+            96%  {left:  75px;}
+            to   {left:  75px; opacity: 1;}
+         }
+         
+         @keyframes fadeIn3
+         {
+            from {opacity: 0;}
+            92%  {opacity: 0;}
+            96%  {opacity: 1;}
+            to   {opacity: 1;}
+         }
+             
+      </style>
+
+   </head>
+   
+   <body>
+      <div class="container">
+         <div style="position:relative;" id="formulaContainer" style="-webkit-user-select: none; -moz-user-select: none;">
+            <span>S</span>
+            <span                style="left:40px;">=</span>
+            <span class="sum1"   style="left:70px;">1</span>
+            <span                style="left:100px;">+</span>
+            <span class="sum2"   style="left:160px;">2</span>
+            <span                style="left:220px;">+</span>
+            <span class="sum3"   style="left:280px;">3</span>
+            <span                style="left:340px;">+</span>
+            <span class="sum4"   style="left:380px;">...</span>
+            <span                style="left:430px;" >+</span>
+            <span class="sum5"   style="left:460px;">(n - 2)</span>
+            <span                style="left:550px;">+</span>
+            <span class="sum6"   style="left:580px;">(n - 1)</span>
+            <span                style="left:670px;">+</span>
+            <span class="sum7"   style="left:700px;">n</span>
+            
+            <span class="fadeIn1" style="top:30px; opacity:0;">+</span>
+           
+            <span class="moveDown">S</span>
+            <span class="moveDown"  style="left:40px;">=</span>
+            <span id="term1"        style="left:70px;">1</span>
+            <span id="plus1"        style="left:100px;">+</span>
+            <span id="term2"        style="left:160px;">2</span>
+            <span id="plus2"        style="left:220px;">+</span>
+            <span id="term3"        style="left:280px;">3</span>
+            <span id="plus3"        style="left:340px;">+</span>
+            <span id="ellipsis"     style="left:380px;">...</span>
+            <span id="plus4"        style="left:430px;" >+</span>
+            <span id="term5"        style="left:460px;">(n - 2)</span>
+            <span id="plus5"        style="left:550px;">+</span>
+            <span id="term6"        style="left:580px;">(n - 1)</span>
+            <span id="plus6"        style="left:670px;">+</span>
+            <span id="term7"        style="left:700px;">n</span>
+            
+            
+            <span class="fadeIn1" style="opacity:0; top:105px; width:730px; border-bottom: solid;"></span>
+            
+            <span id="twoS"style="opacity:0; top:120px;">2</span>
+            <span class="fadeIn2" style="opacity:0; left:18px; top:120px;">S</span>
+            <span class="fadeIn2" style="opacity:0; top:120px; left:40px;">=</span>
+            <span class="fadeIn2" style="opacity:0; top:120px; left:95px;">(n + 1)</span>
+            <span id="factor1" style="opacity:0; top:120px; left:195px;">1</span>
+            <span id="factor2" style="opacity:0; top:120px; left:195px;">2</span>
+            <span id="factor3" style="opacity:0; top:120px; left:195px;">3</span>
+            <span id="factor4" style="opacity:0; top:120px; left:195px;">(n-3)</span>
+            <span id="factor5" style="opacity:0; top:120px; left:195px;">(n-2)</span>
+            <span id="factor6" style="opacity:0; top:120px; left:195px;">(n-1)</span>
+            <span id="factor7" style="opacity:0; top:120px; left:195px;">n</span>
+            <span id="fadeIn3" style="opacity:0; top:160px; left:62px; width:125px; border-bottom: solid;">
+         </div>
+            
+      </div>
+   </body>
+
+</html>
